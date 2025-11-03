@@ -63,8 +63,17 @@ def ask(query: str, max_chapter_allowed=None):
 if __name__ == "__main__":
     while True:
         q = input("\nQ> ").strip()
-        if not q: break
-        # 例：いま第3章までしか読んでいない場合は max_chapter_allowed=3
-        ans, cites = ask(q, max_chapter_allowed=None)
+        if not q:
+            break
+
+        # --- 章制限を手動で指定 ---
+        chap = input("max chapter allowed? (空なら全章) > ").strip()
+        chap = int(chap) if chap else None
+
+        ans, cites = ask(q, max_chapter_allowed=chap)
+
         print("\n---\n", ans)
+        print("\n[参照元]")
+        for c in cites:
+            print(f"chapter {c[0]} ({c[1]}–{c[2]})")
 
