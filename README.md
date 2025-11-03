@@ -1,6 +1,6 @@
-# 🐈‍🖋 RAG Tutorial – 吹水は猫である
+# 🐈‍🖋 RAG Tutorial – 吾輩は猫である
 
-このプロジェクトは、夏目澄石『吹水は猫である』を題材にした **Retrieval-Augmented Generation (RAG)** の最小構成チュートリアルです。
+このプロジェクトは、夏目澄石『吾輩は猫である』を題材にした **Retrieval-Augmented Generation (RAG)** の最小構成チュートリアルです。
 
 小読本文を分割（チャンク化）し、ベクトル検索エンジン **Qdrant** と **OpenAI API** を利用して、意味的に近い文脈を参照しながら質問に回答します。
 
